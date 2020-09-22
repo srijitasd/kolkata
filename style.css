@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #fffcf3;
+}
+
+section {
+  overflow: hidden;
+  height: fit-content;
+}
+
+h1 {
+  font-family: "Rancho", cursive;
+}
+
+header {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background: #fffcf3;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+header > img {
+  height: 3rem;
+  transform: rotateY(180deg);
+}
+
+header > h4 {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.landing-div {
+  height: 80vh;
+  background-image: url(images/victoria.jpg);
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr 2fr;
+}
+
+.welcome,
+.kolkata {
+  color: white;
+  font-weight: 500;
+  font-size: 3.8rem;
+  text-shadow: 0px 0px 7px #000000;
+}
+
+.welcome {
+  grid-row: 2/3;
+  justify-self: center;
+  position: relative;
+  left: -10rem;
+}
+
+.kolkata {
+  grid-row: 3/4;
+  text-align: center;
+}
+
+.landing-div-footer-div {
+  height: 4rem;
+}
+
+.landing-div-footer-div::before {
+  content: "";
+  position: absolute;
+  margin-top: -7rem;
+  background-image: url(images/landing-div-footer.svg);
+  height: 10rem;
+  width: 100%;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 470px) {
+  header > img {
+    height: 3rem;
+    margin-left: 0.1rem;
+  }
+  header > h4 {
+    font-size: 1.2rem;
+  }
+  .landing-div {
+    height: 85vh;
+    background-image: url(images/victori-mobile.jpg);
+    background-size: 100vw 95vh;
+    background-position: center;
+    grid-template-rows: 4fr 1fr 2fr 1fr;
+    overflow: hidden;
+  }
+
+  .welcome,
+  .kolkata {
+    font-size: 3.2rem;
+    text-shadow: 0px 0px 9px #000000;
+  }
+
+  .welcome {
+    left: -5rem;
+  }
+
+  .kolkata {
+    position: relative;
+    left: 2rem;
+  }
+
+  .landing-div-footer-div {
+    height: 3rem;
+  }
+
+  .landing-div-footer-div::before {
+    height: 6rem;
+    margin-top: -5rem;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .welcome {
+    left: -3rem;
+  }
+
+  .landing-div-footer-div::before {
+    height: 6rem;
+    margin-top: -4rem;
+    background-repeat: no-repeat;
+  }
+}
