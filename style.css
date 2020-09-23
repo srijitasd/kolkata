@@ -1,3 +1,54 @@
+.preloader {
+  height: 100vh;
+  width: 100%;
+  background-color: #f9f8f8;
+  position: fixed;
+  z-index: 999;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+.preloader > img {
+  height: 8rem;
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.preloader > svg {
+  align-self: flex-start;
+}
+
+svg text {
+  stroke: #021841;
+  font-size: 3.5rem;
+  font-weight: 650;
+  stroke-width: 2;
+  animation: loader 3s infinite;
+}
+
+@keyframes loader {
+  0% {
+    stroke-dasharray: 0 50%;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -5%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  svg text {
+    font-size: 7rem;
+    font-weight: 800;
+    stroke-width: 4;
+  }
+
+  .preloader > img {
+    height: 6rem;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
