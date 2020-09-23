@@ -15,7 +15,9 @@ section {
   height: fit-content;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: "Rancho", cursive;
 }
 
@@ -69,7 +71,10 @@ header > h4 {
 }
 
 .landing-div-footer-div {
-  height: 4rem;
+  height: 5em;
+  position: relative;
+  top: -1rem;
+  display: flex;
 }
 
 .landing-div-footer-div::before {
@@ -80,6 +85,46 @@ header > h4 {
   height: 10rem;
   width: 100%;
   background-size: contain;
+}
+
+.landing-div-footer-content {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  position: relative;
+  top: -0.5rem;
+}
+
+.landing-div-footer-div > .landing-div-footer-content > h3,
+.landing-div-footer-div > .landing-div-footer-content > img {
+  position: relative;
+  margin: 0.4rem;
+  font-size: 1.8rem;
+  font-weight: 550;
+  align-self: center;
+}
+
+.landing-div-footer-div > .landing-div-footer-content > img {
+  height: 4rem;
+  animation: jump 1.5s linear infinite;
+}
+
+@keyframes jump {
+  0% {
+    top: -0.1rem;
+  }
+  25% {
+    top: -0.3rem;
+  }
+  50% {
+    top: 0rem;
+  }
+  75% {
+    top: 0.2rem;
+  }
+  100% {
+    top: 0rem;
+  }
 }
 
 .div {
@@ -130,6 +175,19 @@ header > h4 {
     height: 15rem;
     width: 100%;
     background-repeat: no-repeat;
+  }
+
+  .landing-div-footer-content {
+    top: -1.5rem;
+  }
+
+  .landing-div-footer-div > h2 {
+    font-size: 1.5rem;
+  }
+
+  .landing-div-footer-div > .landing-div-footer-content > img {
+    height: 3rem;
+    margin: 0rem;
   }
 }
 
