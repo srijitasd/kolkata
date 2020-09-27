@@ -7,7 +7,10 @@
       href="https://fonts.googleapis.com/css2?family=Rancho&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
     <title>Document</title>
   </head>
   <body>
@@ -19,31 +22,54 @@
         </text>
       </svg>
     </div>
-    <header>
-      <img src="images/streetLight.svg" alt="" />
-      <h4>কলকাতা</h4>
-    </header>
-    <section>
-      <div class="landing-div">
-        <h1 class="welcome">Welcome To</h1>
-        <h1 class="kolkata">Kolkata</h1>
-      </div>
-      <div class="landing-div-footer-div">
-        <div class="landing-div-footer-content">
-          <h3>Scroll</h3>
-          <img src="images/scroll-icon.svg" alt="" />
-          <h3>Down</h3>
+    <div class="container">
+      <header>
+        <img src="images/streetLight.svg" alt="" />
+        <h4 id="text">কলকাতা</h4>
+        <nav>
+          <ul>
+            <li><a href="#div">About</a></li>
+            <li><a href="#div">About</a></li>
+            <li><a href="#div">About</a></li>
+            <li><a href="#div">About</a></li>
+            <li><a href="#div">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <div class="landing-div">
+          <h1 class="welcome wow fadeInLeft" data-wow-delay="0.5s">
+            Welcome To
+          </h1>
+          <h1 class="kolkata wow fadeIn" data-wow-delay="0.5s">Kolkata</h1>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="div"></div>
-    </section>
+        <div class="landing-div-footer-div">
+          <div class="landing-div-footer-content">
+            <h3>Scroll</h3>
+            <a href="#div">
+              <img
+                class="wow shake"
+                data-wow-duration="15s"
+                data-wow-iteration="infinite"
+                src="images/scroll-icon.svg"
+                alt=""
+              />
+            </a>
+            <h3>Down</h3>
+          </div>
+        </div>
+      </section>
+      <section id="div">
+        <div class="div"></div>
+      </section>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

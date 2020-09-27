@@ -56,14 +56,35 @@ svg text {
 
 body {
   width: 100vw;
+  /* height 100vh is necessary */
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #fffcf3;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+header {
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+img:focus {
+  outline: none;
 }
 
 section {
   overflow: hidden;
   height: fit-content;
+  scroll-snap-align: start;
 }
 
 h1,
@@ -73,11 +94,12 @@ h3 {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   display: flex;
   margin: 0;
   padding: 0;
+  padding-right: 2rem;
   background: #fffcf3;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
@@ -91,11 +113,38 @@ header > h4 {
   align-self: center;
   font-size: 1.5rem;
   font-weight: 600;
+  flex: 1rem;
+}
+
+header nav {
+  display: flex;
+  flex: 1;
+}
+
+header nav ul {
+  display: flex;
+  margin: auto;
+}
+
+header nav ul li {
+  display: block;
+  margin: 0rem 1rem;
+  font-family: "Rancho", cursive;
+  font-size: 1.3rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav ul li a:focus {
+  outline: none;
 }
 
 .landing-div {
   height: 80vh;
-  background-image: url(images/victoria.jpg);
+  background-image: url(../images/victoria.jpg);
   background-size: 100% 100%;
   display: grid;
   grid-template-rows: 3fr 1fr 1fr 2fr;
@@ -132,7 +181,7 @@ header > h4 {
   content: "";
   position: absolute;
   margin-top: -7rem;
-  background-image: url(images/landing-div-footer.svg);
+  background-image: url(../images/landing-div-footer.svg);
   height: 10rem;
   width: 100%;
   background-size: contain;
@@ -155,27 +204,8 @@ header > h4 {
   align-self: center;
 }
 
-.landing-div-footer-div > .landing-div-footer-content > img {
+.landing-div-footer-div > .landing-div-footer-content > a > img {
   height: 4rem;
-  animation: jump 1.5s linear infinite;
-}
-
-@keyframes jump {
-  0% {
-    top: -0.1rem;
-  }
-  25% {
-    top: -0.3rem;
-  }
-  50% {
-    top: 0rem;
-  }
-  75% {
-    top: 0.2rem;
-  }
-  100% {
-    top: 0rem;
-  }
 }
 
 .div {
@@ -194,7 +224,7 @@ header > h4 {
   }
   .landing-div {
     height: 85vh;
-    background-image: url(images/victori-mobile.jpg);
+    background-image: url(../images/victori-mobile.jpg);
     background-size: 100vw 95vh;
     background-position: center;
     grid-template-rows: 4fr 1fr 2fr 1fr;
@@ -221,7 +251,7 @@ header > h4 {
   }
 
   .landing-div-footer-div::before {
-    background-image: url(images/landing-div-footer-min.svg);
+    background-image: url(../images/landing-div-footer-min.svg);
     margin-top: -10rem;
     height: 15rem;
     width: 100%;
@@ -236,7 +266,7 @@ header > h4 {
     font-size: 1.5rem;
   }
 
-  .landing-div-footer-div > .landing-div-footer-content > img {
+  .landing-div-footer-div > .landing-div-footer-content > a > img {
     height: 3rem;
     margin: 0rem;
   }
